@@ -1,0 +1,101 @@
+header{
+    font-weight: bold;
+}
+
+header, footer{
+    display: grid;
+    padding-left: 20px;
+    justify-content: start;
+    align-content: center;
+    height: 60px;
+    background-color:rgb(66, 135, 245);
+    color : white;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin: 0;
+}
+
+.main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(230, 230, 230);
+}
+
+.nav{
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(66, 135, 245);
+    color: white;
+    align-items: center;
+}
+
+.container{
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 100%;
+    grid-template-rows: 3% 97%;
+    grid-template-areas: 
+    "nav"
+    "main";
+}
+
+.info{
+    display: grid;
+    margin: 10px;
+    width: 100%;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 10% 10% 70% 10%;
+    grid-template-areas: 
+    "title . ."
+    "desc . ."
+    ". . ."
+    "date . price";
+    align-items: center;
+}
+
+.title{
+    grid-area: title;
+    font-weight: bold;
+}
+
+.desc{
+    grid-area: desc;
+}
+
+.date{
+    grid-area: date;
+}
+
+.price{
+    grid-area: price;
+    font-weight: bold;
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.item img{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+p{
+    margin: 0;
+}
