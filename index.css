@@ -59,7 +59,7 @@ body{
     display: grid;
     justify-content: space-evenly;
     grid-template-columns: 100%;
-    grid-template-rows: 3% 97%;
+    grid-template-rows: 50px auto;
     grid-template-areas: 
     "nav"
     "main";
