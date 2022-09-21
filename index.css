@@ -41,11 +41,25 @@ body{
     align-items: center;
 }
 
+.navItem{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navItem:hover{
+    background-color: rgb(114, 165, 245);
+    cursor:pointer;
+}
+
 .container{
     display: grid;
     justify-content: space-evenly;
     grid-template-columns: 100%;
-    grid-template-rows: 3% 97%;
+    grid-template-rows: 50px auto;
     grid-template-areas: 
     "nav"
     "main";
@@ -59,8 +73,8 @@ body{
     grid-template-rows: 10% 10% 70% 10%;
     grid-template-areas: 
     "title . ."
-    "desc . ."
-    ". . ."
+    "desc desc desc"
+    "desc desc desc"
     "date . price";
     align-items: center;
 }
@@ -72,6 +86,7 @@ body{
 
 .desc{
     grid-area: desc;
+    height: 100%;
 }
 
 .date{
@@ -81,6 +96,8 @@ body{
 .price{
     grid-area: price;
     font-weight: bold;
+    text-align: end;
+
 }
 
 .item{
@@ -89,6 +106,7 @@ body{
     margin: 10px;
     background-color: white;
     border-radius: 5px;
+    min-width: 660px;
 }
 
 .item img{
@@ -98,4 +116,35 @@ body{
 
 p{
     margin: 0;
+}
+
+
+
+@media screen and (min-width : 1280px) {
+    .main{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .item{
+        flex-direction: column;
+        height: fit-content;
+        min-width: auto;
+    }
+
+    .info{
+        height: 100px;
+        grid-template-columns: 40% 40% 20%;
+        grid-template-rows: 20% 20% 50% 10%;   
+        width: auto; 
+    }
+
+    .date{
+        flex-wrap: nowrap;
+    }
+
+    .item img{
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 5px;
+    }
 }
